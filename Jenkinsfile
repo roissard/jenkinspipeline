@@ -9,6 +9,7 @@ podTemplate(label: 'mypod', containers: [
     node('mypod') {
         stage('Check running containers') {
             git url: 'https://github.com/roissard/jenkinspipeline.git'
+            sh 'helm version'
             /*container('docker') {
                 // example to show you can run docker commands when you mount the socket
                 sh 'hostname'
