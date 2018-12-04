@@ -8,7 +8,7 @@ podTemplate(label: 'mypod', containers: [
   ) {
     node('mypod') {
         stage('Check running containers') {
-            git url: 'git@github.com:roissard/jenkinspipeline.git' credentialsId: 'roissard'
+            git url: 'git@github.com:roissard/jenkinspipeline.git', credentialsId: 'roissard'
             /*container('docker') {
                 // example to show you can run docker commands when you mount the socket
                 sh 'hostname'
